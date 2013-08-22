@@ -108,37 +108,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
     ####In .bash_functions :######
 
-    # git-related functions in here
-
-    git_branch () {
-      GIT_BRANCH="$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
-      if [[ -n "$GIT_BRANCH" ]] ; then
-        echo ":($GIT_BRANCH)"
-      fi
-    }
-    empty_branch () {
-      name="$1"
-      if [[ -n "$name" ]] ; then
-        echo "This will create a new empty branch in the current"
-        echo -n "git repository called '${name}' ... Continue? [y/N] "
-        read VERIFY
-        if [[ "$VERIFY" = "Y" || "$VERIFY" = "y" ]]; then
-          echo "creating branch '$name'"
-          git symbolic-ref HEAD refs/heads/$name
-          rm .git/index
-          git clean -fdx
-          echo "you should be on your new empty branch! "
-          echo "add/commit files as usual! "
-          echo "( your new branch will show up after you commit something to it )"
-        else
-          echo -n ""
-        fi
-      else
-        echo "Creates a new empty branch in your git repository."
-        echo ""
-        echo "Usage: empty_branch [name_of_new_branch]"
-      fi
-    }
 
     ########In .bashrc #######
 
@@ -151,13 +120,4 @@ fi
       for function in ~/.bash_functions/*; do . $function; done
     fi
 
-    # bash prompt
-    prompt () {
-      PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]\[\e[37m\]\u\[\e[37m\]@\[\e[37m\]\h\[\e[37m\]:\[\e[31m\]\w\[\e[37m\]$(git_branch)$ "
-      if [[ -n "$VIRTUAL_ENV" ]]; then
-        PS1="\[\e[32m\](`basename \"$VIRTUAL_ENV\"`)$PS1"
-      fi
-    }
-
-    PROMPT_COMMAND=prompt
-    export PROMPT_COMMAND
+source /home/apoh/projects/liquidprompt/liquidprompt
