@@ -54,7 +54,7 @@ URxvt.tabbed.tab-bg: 1
 URxvt.tabbed.secondaryScroll: true
 URxvt.tabbed.font: xft:Bitstream Vera Sans Mono:pixelsize=14
 URxvt*inheritPixmap: true
-URxvt*shading: 40
+URxvt*shading: 13
 
 !oldkeys###! Keys
 !oldkeys###! to investigate actual keysym-code press ctrl-v followed by the key
