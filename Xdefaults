@@ -28,23 +28,37 @@ URxvt.externalBorder:0
 #! white
 #URxvt.color7  : #FFFFFF
 #URxvt.color15 : #FFFFFF
+
+
+Xft.dpi: 100
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.autohint: 0
+Xft.rgba: rgb
+Xft.antialias: 1
+
 URxvt.secondaryScroll: true
 #URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
-URxvt*font: xft:Inconsolata:pixelsize=18:antialias=true:hinting=true
+URxvt.intensityStyles: false
+#URxvt.allow_bold: false
+URxvt*font: xft:Inconsolata for Powerline:pixelsize=17:antialias=true:hinting=true\007
+URxvt*boldFont: xft:Inconsolata for Powerline:pixelsize=17:antialias=true:hinting=true\007
+
 #URxvt*boldFont: xft:Inconsolata:bold:pixelsize=11:antialias=true:hinting=true
-URxvt.keysym.C-1: command:\033]710;xft:Inconsolata:pixelsize=20:antialias=true:hinting=true\007
-URxvt.keysym.C-2: command:\033]710;xft:Inconsolata:pixelsize=22:antialias=true:hinting=true\007
-URxvt.keysym.C-3: command:\033]710;xft:Inconsolata:pixelsize=24:antialias=true:hinting=true\007
-URxvt.keysym.C-4: command:\033]710;xft:Inconsolata:pixelsize=26:antialias=true:hinting=true\007
-URxvt.keysym.C-5: command:\033]710;xft:Inconsolata:pixelsize=28:antialias=true:hinting=true\007
-URxvt.keysym.C-6: command:\033]710;xft:Inconsolata:pixelsize=30:antialias=true:hinting=true\007
-URxvt.keysym.C-0: command:\033]710;xft:Inconsolata:pixelsize=18:antialias=true:hinting=true\007
+URxvt.keysym.C-1: command:\033]710;xft:Inconsolata for Powerline:pixelsize=20:antialias=true:hinting=true\007
+URxvt.keysym.C-2: command:\033]710;xft:Inconsolata for Powerline:pixelsize=22:antialias=true:hinting=true\007
+URxvt.keysym.C-3: command:\033]710;xft:Inconsolata for Powerline:pixelsize=24:antialias=true:hinting=true\007
+URxvt.keysym.C-4: command:\033]710;xft:Inconsolata for Powerline:pixelsize=26:antialias=true:hinting=true\007
+URxvt.keysym.C-5: command:\033]710;xft:Inconsolata for Powerline:pixelsize=28:antialias=true:hinting=true\007
+URxvt.keysym.C-6: command:\033]710;xft:Inconsolata for Powerline:pixelsize=30:antialias=true:hinting=true\007
+URxvt.keysym.C-0: command:\033]710;xft:Inconsolata for Powerline:pixelsize=18:antialias=true:hinting=true\007
 URxvt*letterSpace:-1
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox $0
 URxvt.matcher.button: 1
 URxvt.matcher.pattern.1: \\#([0-9]{3,})
-URxvt.matcher.launcher.1: firefox https://trac.bettermarks.com/ticket/$1
+URxvt.matcher.launcher.1: firefox http://trac.bm.loc/ticket/$1
 URxvt.tabbed.saveLines: 1000
 URxvt.tabbed.scrollBar: false
 URxvt.tabbed.tabbar-fg: 3
@@ -99,24 +113,24 @@ URxvt*shading: 13
 !oldkeys###URxvt.keysym.C-Next:    \033[6;5~
 !oldkeys###URxvt.keysym.C-End:     \033[1;5F
 !oldkeys###URxvt.keysym.C-Home:    \033[1;5H
-URxvt.keysym.Home:      \033[1~
-URxvt.keysym.End:       \033[4~
+!URxvt.keysym.Home:      \033[1~
+!URxvt.keysym.End:       \033[4~
 URxvt.keysym.M-Up:      \033[1;3A
 URxvt.keysym.M-Down:    \033[1;3B
 URxvt.keysym.M-Right:   \033[1;3C
 URxvt.keysym.M-Left:    \033[1;3D
-URxvt.keysym.M-Prior:   \033[5;3~
-URxvt.keysym.M-Next:    \033[6;3~
-URxvt.keysym.M-End:     \033[1;3F
-URxvt.keysym.M-Home:    \033[1;3H
-
+!URxvt.keysym.M-Prior:   \033[5;3~
+!URxvt.keysym.M-Next:    \033[6;3~
+!URxvt.keysym.M-End:     \033[1;3F
+!URxvt.keysym.M-Home:    \033[1;3H
+!
 URxvt.keysym.C-Up:      \033[1;5A
 URxvt.keysym.C-Down:    \033[1;5B
 URxvt.keysym.C-Right:   \033[1;5C
 URxvt.keysym.C-Left:    \033[1;5D
-URxvt.keysym.C-Prior:   \033[5;5~
-URxvt.keysym.C-Next:    \033[6;5~
-URxvt.keysym.C-End:     \033[1;5F
-URxvt.keysym.C-Home:    \033[1;5H
+!URxvt.keysym.C-Prior:   \033[5;5~
+!URxvt.keysym.C-Next:    \033[6;5~
+!URxvt.keysym.C-End:     \033[1;5F
+!URxvt.keysym.C-Home:    \033[1;5H
 
 xvkbd.customization: -greek
