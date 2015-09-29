@@ -8,8 +8,8 @@ alias ssh='TERM=xterm-color ssh'
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="af-magic-light"
-ZSH_THEME="agnoster"
+ZSH_THEME="af-magic-light"
+#ZSH_THEME="agnoster"
 # beeps are annoying
 setopt NO_BEEP
 
@@ -51,13 +51,13 @@ setopt NO_BEEP
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent debian bower pip npm vagrant zsh-syntax-highlighting per-directory-history)
+plugins=(git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent debian bower pip npm vagrant zsh-syntax-highlighting per-directory-history autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:$HOME/usr/Elm-Platform/0.13/.cabal-sandbox/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/usr/Elm-Platform/0.13/.cabal-sandbox/bin:/opt/darktable/bin:/usr/local/bin:$PATH
 
 unalias ag
 # export MANPATH="/usr/local/man:$MANPATH"
